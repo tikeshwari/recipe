@@ -1,0 +1,444 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+header {
+width: 100%;
+height: 80px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 100px;
+background: #4A4A4A; /* Darker gray for header background */
+}
+
+.hero {
+height: 100vh;
+width: 100%;
+background-image: url("https://cdn.britannica.com/17/196817-159-9E487F15/vegetables.jpg");
+background-position: center;
+background-size: cover;
+display: flex;
+align-items: center;
+text-align: center;
+padding: 50px;
+background-color: #f4f4f4;
+}
+
+.hero h4, .hero h1, .hero h3 {
+opacity: 0;
+position: relative;
+animation: slideIn 1s forwards; /* 1 second delay */
+}
+
+.hero h4 {
+animation-delay: 0.5s; /* Delay for h4 */
+}
+
+.hero h1 {
+animation-delay: 1s; /* Delay for h1 */
+}
+
+.hero h3 {
+animation-delay: 1.5s; /* Delay for h3 */
+}
+
+@keyframes slideIn {
+from {
+    left: -100px; /* Start from left */
+    opacity: 0;
+}
+to {
+    left: 0;
+    opacity: 1;
+}
+}
+.logo {
+font-size: 28px;
+font-weight: bold;
+color: #FFD700; /* Gold color for the logo */
+margin-right: 40px;
+}
+
+.nav-bar ul {
+display: flex;
+list-style: none;
+}
+
+.nav-bar ul li a {
+display: block;
+color: #FFFFFF; /* White color for navigation links */
+padding: 10px 20px;
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;
+transition: .3s;
+}
+
+.nav-bar ul li a:hover {
+color: #FFD700; /* Gold color on hover */
+}
+
+.content {
+padding: 0 50px;
+max-width: 900px;
+
+}
+
+.content h4 {
+font-size: 28px;
+color: #f10808;
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+
+.content h1 {
+font-size: 55px;
+color: #FFFFFF; /* White color for main heading */
+margin-bottom: 20px;
+line-height: 60px;
+}
+
+.content h3 {
+font-size: 25px;
+color: #F8F4F1; /* Light beige for subheading */
+margin-bottom: 50px;
+}
+
+.button{
+position: absolute;
+background-color: #213032;
+color: #fff;
+text-decoration: none;
+border: 2px solid black;
+font-weight: bold;
+padding: 13px 30px;
+transform: .4s;
+}
+.button:hover{
+    background-color: #97a2a3;
+    color: #213032;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.about {
+width: 100%;
+height: 500px;
+padding: 0 100px;
+background-color: #F8F4F1; /* Light beige background */
+}
+
+.about h2 {
+text-align: center;
+font-size: 36px;
+padding: 20px ;
+color: #4A4A4A; /* Dark gray for about heading */
+}
+
+.about img {
+width: 500px;
+height: 300px;
+padding: 30px;
+}
+
+.main {
+display: flex;
+align-items: center;
+justify-content: space-between;
+mix-blend-mode: multiply;
+}
+
+.about-text p {
+font-size: 16px;
+color: #4A4A4A; /* Dark gray for text */
+}
+
+.recipe{
+width: 100%;
+padding: 100px 0px;
+background-color: #213032;
+}
+.recipe h2{
+color: #edffef;
+font-size: 75px;
+text-transform: capitalize;
+margin-top: 0px;
+margin-bottom: 20px;
+text-align: center;
+}
+.box{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+.card{
+position: relative;
+width: 300px;
+height: 300px;
+margin: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+overflow: hidden;
+}
+.box .card img{
+width: 100%;
+height: 1005;
+object-fit: cover;
+
+}
+.box .card .content{
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 15px;
+background-color: #edffef;
+color: #182f32;
+text-align: center;
+opacity: 0;
+transition: opacity 0.3s;
+}
+.box .card:hover .content{
+opacity: 1;
+}
+.card h3{
+font-size: 20px;
+margin-top: 0;
+margin-bottom: 10px;
+color: #213032;
+}
+.box .card p{
+font-size: 14px;
+margin-bottom: 10px;
+}
+.box .card button{
+position:relative;
+background-color: #213032;
+color: #fff;
+text-decoration: none;
+border: 2px solid black;
+font-weight: bold;
+transform:.4s;
+padding: 13px 30px;
+}
+.box .card button:hover{
+background-color: #f9faf80a;
+color: #213032;
+border: 2px solid black;
+cursor: pointer;
+}
+
+.categories{
+width: 100%;
+padding: 100px 0px;
+background-color: white
+}
+.categories h2{
+color:#070707;
+font-size: 75px;
+text-transform: capitalize;
+margin-top: 0px;
+margin-bottom: 20px;
+text-align: center;
+}
+.ca-card{
+position: relative;
+width: 300px;
+height: 300px;
+margin: 10px;
+border: 5px solid #ccc;
+border-radius: 50%;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+overflow: hidden;
+}
+.box .ca-card .content{
+position: absolute;
+bottom: 0px;
+left: 0px;
+right: 0px;
+padding: 15px;
+background-color: #edffef;
+color: #182f32;
+text-align: center;
+opacity: 0;
+transition: opacity 0.3s;
+}
+.box .ca-card:hover .content{
+opacity: 1;
+}
+.ca-card h3{
+font-size: 20px;
+margin-top: 0;
+margin-bottom: 10px;
+color: #213032;
+}
+.box .ca-card p{
+font-size: 14px;
+margin-bottom: 10px;
+}
+.box .ca-card button{
+position:relative;
+background-color: #213032;
+color: #fff;
+text-decoration: none;
+border: 2px solid black;
+font-weight: bold;
+transform:.4s;
+padding: 13px 30px;
+}
+.box .ca-card button:hover{
+background-color: #97a2a3;
+color: #213032;
+border: 2px solid black;
+cursor: pointer;
+}
+.box .ca-card img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.contact{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding: 20px;
+background: #182f32;
+}
+.contact-info,.contact-form{
+width: 100%;
+max-width: 400px;
+margin: 20px;
+text-align: center;
+color: #edffef;
+font-size: 25px;
+}
+.contact-info h2, .contact-form h2{
+font-size: 24px;
+margin-bottom: 20px;
+color: #edffef;
+}
+.contact-form form{
+text-align: center;
+}
+.contact-form label, 
+.contact-form input , 
+.contact-form textarea ,
+.contact-form button {
+display: block;
+width: 100%;
+margin-bottom: 10px;
+}
+.contact-form button{
+background-color: #213032;
+color: #fff;
+text-decoration: none;
+border: 2px solid black;
+font-weight: bold;
+transform:.4s;
+padding: 10px 0px;
+}
+.contact-form button:hover{
+background-color: #97a2a3;
+color: #213032;
+border: 2px solid black;
+cursor: pointer;
+}
+.contact-form label{
+text-align: left;
+color: #edffef;
+}
+.contact-form input, .contact-form textarea{
+padding: 8px;
+}
+.contact-info p{
+padding: 15px;
+}
+
+.social-icons {
+text-align: center;
+margin-top: 20px;
+padding-bottom: 15px;
+}
+
+.social-icons .icon {
+display: inline-block;
+margin: 0 10px;
+font-size: 24px;
+color: #555;
+transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons .icon:hover {
+color: #000;
+transform: scale(1.2); /* Scale effect on hover */
+}
+
+
+footer {
+text-align: center;
+padding: 20px 0;
+background: #4A4A4A; /* Dark gray footer background */
+color: #FFFFFF; /* White text */
+}
+
+footer h5 {
+margin: 10px 0;
+}
+
+footer .social-icons {
+margin: 10px 0;
+}
+
+footer .social-icons a {
+color: #FFFFFF; /* White social icons */
+font-size: 24px;
+margin: 0 10px;
+text-decoration: none;
+}
+
+footer .social-icons a:hover {
+color: #FFD700; /* Gold on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+header {
+    padding: 0 20px;
+}
+
+.content h1 {
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.about img {
+    width: 100%;
+}
+
+.main {
+    flex-direction: column;
+}
+
+.recipe, .categories {
+    padding: 20px;
+}
+
+.card, .ca-card {
+    width: 100%;
+}
+
+.contact {
+    padding: 20px;
+}
+}
